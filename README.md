@@ -8,5 +8,6 @@ Pequeno app que consome a API do github onde busca os usuários e mostra seus re
  - Tratamento de exceções.
  - consome a API do GitHub.
  - design responsivo.
+ - pequenas animaçõees em css
  
 Em breve farei mais algumas melhorias.
