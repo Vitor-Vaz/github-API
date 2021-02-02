@@ -5,11 +5,7 @@ class UsuarioController {
 
         usuario.criaUsuario(nomeUsuario, () => {
 
-
-            console.log(usuario)
             UsuarioView.mostraUsuario(usuario._nome, usuario._biografia, usuario._profilepic);
-
-
 
         })
 

@@ -13,7 +13,7 @@ class UsuarioView {
         if(biografia == null){
             document.getElementById("biografia").textContent = "Sem Descrição..😒😒"
         }else {
-            document.getElementById("biografia").textContent = `"${biografia}"`;
+            document.getElementById("biografia").textContent = 
         }
 
 
