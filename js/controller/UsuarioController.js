@@ -17,9 +17,6 @@ class UsuarioController {
 
             document.querySelector("#tabela-repositorios").innerHTML = "";
 
-            /// tente colocar um método melhor aqui!!
-
-
             usuario._repositorio.forEach((valor, indice) => {
 
                 UsuarioView.mostraRepositorio(usuario._repositorio[indice].name, usuario._repositorio[indice].html_url, usuario._repositorio[indice].language);

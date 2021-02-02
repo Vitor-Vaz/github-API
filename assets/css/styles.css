@@ -21,7 +21,7 @@ html {
 }
 
 .pesquisa {
-    width: 35%;
+    width: 25%;
     height: 50%;
     display: flex;  
     align-items: center;
@@ -37,7 +37,7 @@ html {
 
 
 #butaum{
-    height: 36px;
+    height: 37px;
     background-color: white;
     border-radius: 4px;
 }
@@ -59,6 +59,7 @@ h1 {
 }
 
 .main-container{
+    font-family: 'Merriweather Sans', sans-serif;
     margin-top: 20px;
     width: 100%;
     display: flex;
@@ -89,11 +90,16 @@ img {
 
 #nome{
     margin: 10px 0 10px 0;
+    font-size: 20px;
+}
+
+#biografia{
+    font-style: italic;
 }
 
 .tabela {
     margin: 30px;
-    width: 70%;
+    width: 41.5%;
 }
 
 #linhaHeader{
@@ -107,17 +113,89 @@ img {
     height: 20px;
     border: 1px black solid;
     text-align: center;
+    
+}
+
+
+.colunaClasse{
+    padding: .7em;
+	margin: 0;
+	text-align: center;
+}
+
+.colunaClasse a{
+    color: black;
+    text-decoration: none;
+
+}
+
+.colunaClasse a:hover{
+    color:white;
+    text-decoration: underline;
 }
 
 .linhaClasse:hover{
     color: white;
     background-color: #053d7c;
+    
 }
 
 
 .invisivel {
-    background-color: white;
-    color: white;
-    border-color: white;
-    
+    display: none;
+
 }
+
+
+@media(max-width: 600px){
+    .titulo {
+        width: 60%;
+        
+    }
+
+    i{
+        font-size: 50px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .pesquisa {
+        width: 80%;
+    }
+
+    #butaum{
+        height: 36px;
+        width: 70%;
+        background-color: white;
+        border-radius: 4px;
+    }
+
+    #butaum:active{
+        transform: scale(1.1);
+        background-color: #0f69cf;
+        border-color: white;
+        color: white;
+        transition: .1s;
+    }
+
+    #mostraTudo{
+        width: 90%;
+    }
+
+
+    img {
+        width: 250px;
+        height: 250px;
+        border-radius: 200px;
+    }
+
+    .tabela {
+        width: 95%;
+    }
+
+
+}
+
+
