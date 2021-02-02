@@ -3,11 +3,11 @@ Pequeno app que consome a API do github onde busca os usuários e mostra seus re
 
  - Utiliza orientação a objetos e classes estáticas.
  - Modelo MVC melhor implementado.
- - Arrow function.
- - linguagens HTML, CSS e Javascript.
+ - Arrow functions.
+ - Linguagens HTML, CSS e Javascript.
  - Tratamento de exceções.
- - consome a API do GitHub.
- - design responsivo.
- - pequenas animaçõees em css
+ - Consome a API do GitHub.
+ - Design responsivo.
+ - Pequenas animações em css.
  
 Em breve farei mais algumas melhorias.
