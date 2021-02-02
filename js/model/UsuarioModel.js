@@ -5,10 +5,9 @@ class UsuarioModel {
         this._biografia = "";
         this._profilepic = "";
         this._repositorio = [];
-        this._tecnologias = [];
     }
 
-    criaUsuario(user, callback) {  
+    criaUsuario(user, callback) {
 
         let request = new XMLHttpRequest();
 
@@ -16,23 +15,26 @@ class UsuarioModel {
 
         request.addEventListener('load', () => {
 
-            if (request.status == 200) {
-
+            try {
+                if(request.status != 200) throw "Um código inesperado foi retornado!";
+                
                 let response = JSON.parse(request.responseText);
 
                 this._nome = response.name;
                 this._biografia = response.bio;
                 this._profilepic = response.avatar_url;
-
+    
                 callback();
-            } else {
-                console.log("Um código inesperado foi retornado!");
+            } catch(erro) {
+                console.log(`Erro ${erro}`);
+                UsuarioView.usuarioNaoEncontrado();
             }
+
         });
 
         request.send();
 
-        
+
     }
 
     pegaRepositorio(user, callback) {
@@ -50,30 +52,6 @@ class UsuarioModel {
                 this._repositorio = response;
 
                 callback()
-
-            } else {
-                console.log("Um código inesperado foi retornado!");
-            }
-        });
-
-        request.send();
-    }
-
-    pegaTecnologias(url, callback) {
-
-        let request = new XMLHttpRequest();
-
-        request.open("GET", url);
-
-        request.addEventListener('load', () => {
-
-            if (request.status == 200) {
-
-                let response = JSON.parse(request.responseText);
-
-                this._tecnologias.push(response);
-
-                callback();
 
             } else {
                 console.log("Um código inesperado foi retornado!");

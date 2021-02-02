@@ -17,7 +17,7 @@ class UsuarioView {
         }
 
 
-        
+
     }
 
     static mostraRepositorio(nome, linkRepo, linguagem) {
@@ -57,5 +57,12 @@ class UsuarioView {
         td.innerHTML = `<a href="${dado}" target="_blank">Clique aqui para acessar</a>`;
 
         return td;
+    }
+
+    static usuarioNaoEncontrado(){
+        document.getElementById('profile').src = "assets/img/octocat-sad.png";
+        document.getElementById("nome").textContent = "Usuario não encontrado";
+        document.getElementById("biografia").textContent = "Sem usuario...sem descrição...";
+        document.querySelector("#tabela-repositorios").innerHTML = "";
     }
 }
