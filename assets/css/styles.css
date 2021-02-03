@@ -32,7 +32,7 @@ html {
     flex-direction: column;
     align-items: center;
     background-color: #0f69cf;
-    height: 30vh;
+    height: 21vh;
     animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -75,11 +75,11 @@ html {
 }
 
 i{
-    font-size: 70px;
+    font-size: 60px;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .main-container{
@@ -123,6 +123,13 @@ img {
 #biografia{
     font-style: italic;
 }
+
+#divDaTabela{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}    
+
 
 .tabela {
     margin: 30px;

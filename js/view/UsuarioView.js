@@ -13,7 +13,7 @@ class UsuarioView {
         if(biografia == null){
             document.getElementById("biografia").textContent = "Sem Descrição..😒😒"
         }else {
-            document.getElementById("biografia").textContent = 
+            document.getElementById("biografia").textContent = `"${biografia}"`;
         }
 
 
@@ -62,6 +62,24 @@ class UsuarioView {
         document.getElementById('profile').src = "assets/img/octocat-sad.png";
         document.getElementById("nome").textContent = "Usuario não encontrado";
         document.getElementById("biografia").textContent = "Sem usuario...sem descrição...";
-        document.querySelector("#tabela-repositorios").innerHTML = ""; 
+        document.querySelector("#divDaTabela").innerHTML = ""; 
     }
+
+
+    static criaTabela(elemento){
+        document.getElementById(elemento).innerHTML = `    
+    <table class="tabela">
+            <thead>
+                <tr class="linhaClasse" id="linhaHeader">
+                    <th class="colunaClasse">Nome</th>
+                    <th class="colunaClasse">Linguagem</th>
+                </tr>
+            </thead>
+        <tbody id="tabela-repositorios">
+
+        </tbody>
+    </table>`
+    }
+
+
 }

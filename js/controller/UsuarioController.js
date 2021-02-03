@@ -6,6 +6,7 @@ class UsuarioController {
         usuario.criaUsuario(nomeUsuario, () => {
 
             UsuarioView.mostraUsuario(usuario._nome, usuario._biografia, usuario._profilepic);
+            UsuarioView.criaTabela('divDaTabela');
 
         })
 
